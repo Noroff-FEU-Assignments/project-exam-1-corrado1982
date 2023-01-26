@@ -5,3 +5,8 @@ nav {
 footer {
     background-color: rgb(207, 207, 139);
 }
+
+.content figure img {
+    width: 50%;
+    height: 50%;
+}
