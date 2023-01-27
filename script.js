@@ -7,13 +7,18 @@ async function getPosts() {
     const result = await data.json();
     console.log(result);
     console.log(result[0]._embedded.wpfeaturedmedia);
-    // const image = result[i]._embedded.wp.featuredmedia[0].media_details.sizes.full.source_url;
-
+    
+    // .media_details.sizes.large
     for (i = 0 ; i < result.length; i++) {
+        const image = result[i]._embedded["wp:featuredmedia"][0].source_url;
+        const title = result[i].title.rendered;
+        const previousText = result[i].excerpt.rendered;
+
         postContainer.innerHTML += 
         `<div>
-        <h2>${result[i].title.rendered}</h2>
-        <img src="${result[i]._embedded["wp:featuredmedia"][0].source_url}" alt="image of something" />
+        <h2>${title}</h2>
+        <img src="${image}" alt="image of something" />
+        <p>${previousText}</p>
         </div>`;
     };
 
