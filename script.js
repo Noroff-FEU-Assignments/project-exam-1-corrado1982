@@ -1,8 +1,11 @@
 const postContainer = document.querySelector(".post-container");
-const url = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?per_page=4&_embed&page=2";
+const preArrow = document.querySelector("#slide-arrow-prev");
+const newArrow = document.querySelector("#slide-arrow-next");
+const baseUrl = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?per_page=4&_embed";
 //sorted by date by default
 
-async function getPosts() {
+
+async function getPosts(url) {
     const data = await fetch(url);
     const result = await data.json();
     console.log(result);
@@ -20,7 +23,16 @@ async function getPosts() {
         <img src="${image}" alt="image of something" />
         <p>${previousText}</p>
         </div>`;
-        
     };
 };
-getPosts();
+getPosts(baseUrl);
+
+newArrow.onclick = function() {
+    const newUrl = baseUrl + `&page=2`;
+    postContainer.innerHTML = "";
+
+    
+    
+        
+    getPosts(newUrl);
+}
