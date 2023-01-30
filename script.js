@@ -3,6 +3,7 @@ const preArrow = document.querySelector("#slide-arrow-prev");
 const newArrow = document.querySelector("#slide-arrow-next");
 const baseUrl = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?per_page=4&_embed";
 //sorted by date by default
+const slide = document.querySelector(".card-post");
 
 
 async function getPosts(url) {
@@ -27,13 +28,13 @@ async function getPosts(url) {
 };
 getPosts(baseUrl);
 
-newArrow.onclick = function() {
-    const addPage = 2 ;
-    const newUrl = baseUrl + `&page=${addPage}`;
-    postContainer.innerHTML = "";
-
-    
-    
-        
-    getPosts(newUrl);
-}
+// newArrow.onclick = function() {
+//     const addPage = 2 ;
+//     const newUrl = baseUrl + `&page=${addPage}`;
+//     postContainer.innerHTML = "";
+//     getPosts(newUrl);
+// }
+newArrow.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
+    postContainer.scrollLeft += slideWidth;
+});
