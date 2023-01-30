@@ -1,7 +1,7 @@
 const postContainer = document.querySelector(".post-container");
 const url = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?per_page=100&_embed";
+//sorted by date by default
 
-// console.log("ciaao");
 async function getPosts() {
     const data = await fetch(url);
     const result = await data.json();
@@ -10,6 +10,11 @@ async function getPosts() {
     
     // .media_details.sizes.large
     for (i = 0 ; i < result.length; i++) {
+
+        if (i > 3) {
+            break;
+        }
+
         const image = result[i]._embedded["wp:featuredmedia"][0].source_url;
         const title = result[i].title.rendered;
         const previousText = result[i].excerpt.rendered;
