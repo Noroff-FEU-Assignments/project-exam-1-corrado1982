@@ -15,7 +15,11 @@ async function getPosts() {
         const previousText = result[i].excerpt.rendered;
 
         postContainer.innerHTML += 
-        `<div>
+        //EXPERIMENT
+        // `<div class="content">
+        // ${result[i].content.rendered}
+        // </div>`
+        `<div class="card-post">
         <h2>${title}</h2>
         <img src="${image}" alt="image of something" />
         <p>${previousText}</p>
