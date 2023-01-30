@@ -28,7 +28,8 @@ async function getPosts(url) {
 getPosts(baseUrl);
 
 newArrow.onclick = function() {
-    const newUrl = baseUrl + `&page=2`;
+    const addPage = 2 ;
+    const newUrl = baseUrl + `&page=${addPage}`;
     postContainer.innerHTML = "";
 
     
