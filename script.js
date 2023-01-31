@@ -18,16 +18,18 @@ async function getPosts(url) {
     console.log(result[0]._embedded.wpfeaturedmedia);
     
     for (i = 0 ; i < result.length; i++) {
-
+        const id = result[i].id;
         const image = result[i]._embedded["wp:featuredmedia"][0].source_url;
         const title = result[i].title.rendered;
         const previousText = result[i].excerpt.rendered;
         
         postContainer.innerHTML += 
         `<div class="card-post">
+        <a href="#">
         <h2>${title}</h2>
         <img src="${image}" alt="image of something" />
         <p>${previousText}</p>
+        </a>
         </div>`;
     };
 };
