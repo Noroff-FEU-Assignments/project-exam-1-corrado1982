@@ -1,9 +1,14 @@
 const postContainer = document.querySelector(".post-container");
 const preArrow = document.querySelector("#slide-arrow-prev");
 const newArrow = document.querySelector("#slide-arrow-next");
-const baseUrl = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?per_page=4&_embed";
+let page = 2;
+
+
+const pageUrl = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?per_page=4&_embed&page=1";
 //sorted by date by default
+const baseUrl = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?per_page=4&_embed&page=";
 const slide = document.querySelector(".card-post");
+
 
 
 async function getPosts(url) {
@@ -26,15 +31,19 @@ async function getPosts(url) {
         </div>`;
     };
 };
-getPosts(baseUrl);
+getPosts(pageUrl);
 
-// newArrow.onclick = function() {
-//     const addPage = 2 ;
-//     const newUrl = baseUrl + `&page=${addPage}`;
-//     postContainer.innerHTML = "";
-//     getPosts(newUrl);
-// }
-newArrow.addEventListener("click", () => {
-    const slideWidth = slide.clientWidth;
-    postContainer.scrollLeft += slideWidth;
-});
+newArrow.onclick = function() {
+    
+    const addPage = page ++;
+    const newUrl = baseUrl + addPage;
+    if(page === 4) {
+        page = 1;
+    }
+    postContainer.innerHTML = "";
+    getPosts(newUrl);
+}
+// newArrow.addEventListener("click", () => {
+//     const slideWidth = slide.clientWidth;
+//     postContainer.scrollLeft += slideWidth;
+// });

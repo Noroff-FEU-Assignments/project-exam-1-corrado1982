@@ -11,6 +11,17 @@ footer {
 .slide-section {
     display: flex;
 }
+.post-container{
+    /* position: absolute; */
+    /* left: -100px;
+    width: 100px;
+    height: 100px; */
+    /* background: blue; */
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
 
 .slide-arrow {
     /* position: absolute; */
