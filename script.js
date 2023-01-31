@@ -28,7 +28,7 @@ async function getPosts(url) {
         <a href="#">
         <h2>${title}</h2>
         <img src="${image}" alt="image of something" />
-        <p>${previousText}</p>
+        <p class="paragraf">${previousText}</p>
         </a>
         </div>`;
     };

@@ -85,20 +85,28 @@ footer a {
     border-radius: 40px 0 0 40px;
   }
 .posts-container {
-    grid-template-columns: auto auto auto auto;
-    display: grid;
+    /* grid-template-columns: auto auto auto auto;
+    display: grid; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly
 }
 .post-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .card-post {
     margin: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: space-around;
 }
 .card-post img {
     height: max(150px);
     width: max(300px);
     object-fit: cover;
+}
+.card-post a p {
+    width: 300px;
 }
