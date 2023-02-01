@@ -14,6 +14,11 @@ async function getCards (url) {
         const image = result[i]._embedded["wp:featuredmedia"][0].source_url;
         const title = result[i].title.rendered;
         const previousText = result[i].excerpt.rendered;
+
+        if(result.length < 10) {
+            nextPosts.style.display = "none";
+            console.log("don t display it");
+        }
         
         postsContainer.innerHTML += 
         `<div class="card-post">
@@ -22,13 +27,22 @@ async function getCards (url) {
         <img src="${image}" alt="image of something" />
         <p>${previousText}</p>
         </a>
-        </div>`;
+        </div>`
+        ;
+       
     };
+       
 }
 getCards(pageUrl);
+
 
 nextPosts.onclick = function() {
     const addPage = page ++;
     const newUrl = baseUrl + addPage;
+    
+   
+   
+
     getCards(newUrl);
 }
+
