@@ -15,7 +15,7 @@ async function getPosts(url) {
     const data = await fetch(url);
     const result = await data.json();
     console.log(result);
-    console.log(result[0]._embedded.wpfeaturedmedia);
+    // console.log(result[0]._embedded.wpfeaturedmedia);
     
     for (i = 0 ; i < result.length; i++) {
         const id = result[i].id;
@@ -45,3 +45,13 @@ newArrow.onclick = function() {
     postContainer.innerHTML = "";
     getPosts(newUrl);
 }
+// preArrow.onclick = function() {
+    
+//     const remPage = page --;
+//     const oldUrl = baseUrl + remPage;
+//     if(page === 0) {
+//         page = 3;
+//     }
+//     postContainer.innerHTML = "";
+//     getPosts(oldUrl);
+// }

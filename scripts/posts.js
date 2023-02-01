@@ -29,20 +29,14 @@ async function getCards (url) {
         </a>
         </div>`
         ;
-       
     };
-       
 }
 getCards(pageUrl);
-
 
 nextPosts.onclick = function() {
     const addPage = page ++;
     const newUrl = baseUrl + addPage;
     
-   
-   
-
-    getCards(newUrl);
+   getCards(newUrl);
 }
 
