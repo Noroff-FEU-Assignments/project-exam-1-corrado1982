@@ -45,7 +45,3 @@ newArrow.onclick = function() {
     postContainer.innerHTML = "";
     getPosts(newUrl);
 }
-// newArrow.addEventListener("click", () => {
-//     const slideWidth = slide.clientWidth;
-//     postContainer.scrollLeft += slideWidth;
-// });
