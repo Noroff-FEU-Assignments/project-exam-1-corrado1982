@@ -19,12 +19,12 @@ async function getCards (url) {
             nextPosts.style.display = "none";
             console.log("don t display it");
         }
-        
+        // detail.html?id=${id}
         postsContainer.innerHTML += 
         `<div class="card-post">
-        <a href="#">
+        <a href="detail.html?id=${id}">
         <h2>${title}</h2>
-        <img src="${image}" alt="image of something" />
+        <img src="${image}" alt="image of ${title}" />
         <p>${previousText}</p>
         </a>
         </div>`
