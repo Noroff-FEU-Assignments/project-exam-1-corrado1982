@@ -19,7 +19,7 @@ async function getDetailPost() {
     `<div>
     <h2>${title}</h2>
     <div>${result.content.rendered} </div>
-    <p>${previousText}</p>
+    
     </a>
     </div>`;
 };
