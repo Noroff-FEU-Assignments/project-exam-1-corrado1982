@@ -1,12 +1,12 @@
-const postContainer = document.querySelector(".post-container");
+const postContainer = document.querySelector(".post-row-container");
 const preArrow = document.querySelector("#slide-arrow-prev");
 const newArrow = document.querySelector("#slide-arrow-next");
 let page = 2;
 
 
-const pageUrl = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?per_page=4&_embed&page=1";
+const pageUrl = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?per_page=12&_embed";
 //sorted by date by default
-const baseUrl = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?per_page=4&_embed&page=";
+// const baseUrl = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?per_page=4&_embed&page=";
 const slide = document.querySelector(".card-post");
 
 
@@ -24,8 +24,8 @@ async function getPosts(url) {
         const previousText = result[i].excerpt.rendered;
         
         postContainer.innerHTML += 
-        `<div class="card-post">
-        <a href="#">
+        `<div class="card-row">
+        <a href="detail.html?id=${id}">
         <h2>${title}</h2>
         <img src="${image}" alt="image of something" />
         <p class="paragraf">${previousText}</p>
@@ -35,23 +35,13 @@ async function getPosts(url) {
 };
 getPosts(pageUrl);
 
-newArrow.onclick = function() {
+// newArrow.onclick = function() {
     
-    const addPage = page ++;
-    const newUrl = baseUrl + addPage;
-    if(page === 4) {
-        page = 1;
-    }
-    postContainer.innerHTML = "";
-    getPosts(newUrl);
-}
-// preArrow.onclick = function() {
-    
-//     const remPage = page --;
-//     const oldUrl = baseUrl + remPage;
-//     if(page === 0) {
-//         page = 3;
+//     const addPage = page ++;
+//     const newUrl = baseUrl + addPage;
+//     if(page === 4) {
+//         page = 1;
 //     }
 //     postContainer.innerHTML = "";
-//     getPosts(oldUrl);
+//     getPosts(newUrl);
 // }

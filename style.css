@@ -96,6 +96,24 @@ footer a {
     flex-wrap: wrap;
     justify-content: center;
 }
+.post-row-container {
+    display: flex;
+    /* flex-wrap: wrap;
+    justify-content: center; */
+}
+.card-row {
+    padding: 20px;
+    margin-inline-start: 20px;
+    margin: auto;
+}
+.card-row img {
+    height: max(150px);
+    width: max(300px);
+    object-fit: cover;
+}
+.card-row a p {
+    width: 300px;
+}
 .card-post {
     padding: 20px;
     margin-inline-start: 20px;
