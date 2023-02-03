@@ -9,6 +9,7 @@ async function getAbout() {
 
     aboutContainer.innerHTML = 
     `
+    <h2>${result[0].title.rendered}</h2>
     <div>${result[0].content.rendered}</div>
     `
 }
