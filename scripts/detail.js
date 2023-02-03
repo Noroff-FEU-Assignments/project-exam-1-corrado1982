@@ -16,11 +16,11 @@ async function getDetailPost() {
         const previousText = result.excerpt.rendered;
 
     detailContainer.innerHTML = 
-    `<div>
+    `<div class="detail-item">
     <h2>${title}</h2>
     <div>${result.content.rendered} </div>
     
-    </a>
+    
     </div>`;
 };
 getDetailPost(url);
