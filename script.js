@@ -20,13 +20,13 @@ async function getPosts(url) {
     const slideOne = "";
 
     for (i = 0 ; i < result.length; i++) {
-        if(i === 0 && i < 4) {
-        return slideOne;
-        };
-        const id = result[slideOne].id;
-        const image = result[slideOne]._embedded["wp:featuredmedia"][0].source_url;
-        const title = result[slideOne].title.rendered;
-        const previousText = result[slideOne].excerpt.rendered;
+        // if(i === 0 && i < 4) {
+        // return slideOne;
+        // };
+        const id = result[i].id;
+        const image = result[i]._embedded["wp:featuredmedia"][0].source_url;
+        const title = result[i].title.rendered;
+        const previousText = result[i].excerpt.rendered;
         
 
         postContainer.innerHTML += 
