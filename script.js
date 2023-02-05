@@ -31,7 +31,7 @@ async function getPosts(url) {
 
         postContainer.innerHTML += 
         `<div class="card-row">
-        <a href="detail.html?id=${id}">
+        <a href="detail.html?_embed&id=${id}">
         <h2>${title}</h2>
         <img src="${image}" alt="image of something" />
         <p class="paragraf">${previousText}</p>
