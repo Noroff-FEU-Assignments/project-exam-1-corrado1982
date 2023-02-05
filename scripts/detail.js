@@ -1,4 +1,5 @@
 const detailContainer = document.querySelector(".detail-container");
+const picToClick = document.querySelector(".pic-to-click");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -21,10 +22,10 @@ async function getDetailPost() {
     `<div class="detail-item">
     <h2>${title}</h2>
     
-    <div>${result.content.rendered} </div>
+    <a class="pic-to-click" href="#">${result.content.rendered} </a>
     
     </div>
-    <div> <img src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="we"/> </div>
+    <div> <img class="big-pic" src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="we"/> </div>
     `;
 };
 getDetailPost(url);
