@@ -22,7 +22,7 @@ async function getCards (url) {
         // detail.html?id=${id}
         postsContainer.innerHTML += 
         `<div class="card-post">
-        <a href="detail.html?_embed&id=${id}">
+        <a href="detail.html?id=${id}">
         <h2>${title}</h2>
         <img src="${image}" alt="image of ${title}" />
         <p>${previousText}</p>
