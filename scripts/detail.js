@@ -1,5 +1,6 @@
 const detailContainer = document.querySelector(".detail-container");
 const picToClick = document.querySelector(".pic-to-click");
+const bigPic = document.querySelector(".big-pic");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -22,7 +23,7 @@ async function getDetailPost() {
     `<div class="detail-item">
     <h2>${title}</h2>
     
-    <a class="pic-to-click" href="#">${result.content.rendered} </a>
+    <div class="pic-to-click">${result.content.rendered} </div>
     
     </div>
     <div> <img class="big-pic" src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="we"/> </div>
@@ -30,3 +31,7 @@ async function getDetailPost() {
 };
 getDetailPost(url);
 //<div> <img src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="we"/> </div>
+
+picToClick.onclick = function (){
+bigPic.style.display = "block";
+}

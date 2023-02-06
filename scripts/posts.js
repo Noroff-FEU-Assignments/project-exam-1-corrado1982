@@ -11,7 +11,7 @@ async function getCards (url) {
 
     for (i = 0 ; i < result.length; i++) {
         const id = result[i].id;
-        const image = result[i]._embedded["wp:featuredmedia"][0].source_url;
+        const image = result[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
         const title = result[i].title.rendered;
         const previousText = result[i].excerpt.rendered;
 

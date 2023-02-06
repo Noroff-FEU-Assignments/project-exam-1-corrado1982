@@ -6,17 +6,21 @@
 h2 {
     font-size: 3em;
 }
-img {
-    height: max(200px);
-    width: max(400px);
-    object-fit: cover;
-}
-figure {
+
+.wp-block-image {
     margin: auto;
     height: max(200px);
     width: max(400px);
 }
+.wp-block-image img {
+    height: max(200px);
+    width: max(400px);
+    object-fit: cover;
+}
 p {
     max-width: 700px;
     margin: 40px;
+}
+.big-pic {
+    display: none;
 }
