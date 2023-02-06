@@ -1,5 +1,5 @@
 const detailContainer = document.querySelector(".detail-container");
-const picToClick = document.querySelector(".pic-to-click");
+
 const bigPic = document.querySelector(".big-pic");
 
 const queryString = document.location.search;
@@ -12,13 +12,14 @@ console.log(url)
 async function getDetailPost() {
     const data = await fetch(url);
     const result = await data.json();
-    console.log(result);
+    
 
     // const image = result._embedded["wp:featuredmedia"][0].source_url;
         const title = result.title.rendered;
         // const previousText = result.excerpt.rendered;
         //const image = result._embedded["wp:featuredmedia"][0].source_url;
-// 
+
+
     detailContainer.innerHTML = 
     `<div class="detail-item">
     <h2>${title}</h2>
@@ -31,7 +32,9 @@ async function getDetailPost() {
 };
 getDetailPost(url);
 //<div> <img src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="we"/> </div>
-
+const picToClick = document.querySelector(".pic-to-click");
+console.log(picToClick);
 picToClick.onclick = function (){
-bigPic.style.display = "block";
+    console.log("clicked")
+// bigPic.style.display = "block";
 }
