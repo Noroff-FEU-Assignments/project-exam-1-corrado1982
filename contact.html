@@ -20,31 +20,33 @@
     </nav>
     <section id="contact-form">
         <form>
-            <div class="name-form">
+            <div class="name-form forms">
                 <label for="full-name">Name</label>
                 <input type="text" id="full-name" placeholder="Full Name"/>
                 <div class="error-style" id="name-error">*Should be more than 5 characters long</div>
             </div>
-            <div class="email-form">
+            <div class="email-form forms">
                 <label for="email">Email</label>
                 <input type="email" id="e-mail" placeholder="Your email"/>
                 <div class="error-style" id="email-error">*Must be a valid email address</div>
             </div>
-            <div class="subject-form">
+            <div class="subject-form forms">
                 <label for="subject">Subject</label>
                 <input type="text" id="subject" placeholder="Subject"/>
                 <div class="error-style" id="subject-error">*Should be more than 15 characters long</div>
             </div>
-            <div class="message-form">
+            <div class="message-form forms">
                 <label for="message">Message</label>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <textarea name="message" id="message" cols="20" rows="10" placeholder="Your Message"></textarea>
                 <div class="error-style" id="message-error">*Should be more than 25 characters long</div>
             </div>
+            <input class="submit" type="submit" value="Submit">
         </form>
     </section>
     <footer>
         <a href="#">About Us</a>
         <a href="#">Contact Us</a>
     </footer>
+    <script src="/scripts/contact.js"></script>
 </body>
 </html>

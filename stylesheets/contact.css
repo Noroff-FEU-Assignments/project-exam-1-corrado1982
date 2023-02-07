@@ -2,3 +2,39 @@
     display: none;
     color: red;
 }
+#full-name,
+#e-mail,
+#subject {
+    width: 234px;
+    height: 35px;
+    font-size: 1em;
+}
+#message {
+    font-size: 1.5em;
+}
+
+label {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+form {
+    /* height: 360px; */
+    background-color: aquamarine;
+    width: 327px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.submit {
+    margin: 15px auto;
+    width: 100px;
+    height: 30px;
+    font-size: 1.5em;
+}
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
