@@ -1,5 +1,7 @@
 const detailContainer = document.querySelector(".detail-container");
-
+const titleContainer = document.querySelector(".title");
+const imageContainer = document.querySelector(".image-preview");
+const textContainer = document.querySelector(".text-container");
 const bigPic = document.querySelector(".big-pic");
 
 const queryString = document.location.search;
@@ -20,21 +22,27 @@ async function getDetailPost() {
         //const image = result._embedded["wp:featuredmedia"][0].source_url;
         const image = result._embedded["wp:featuredmedia"][0].source_url;
 
-    detailContainer.innerHTML = 
-    `<div class="detail-item">
-    <h2>${title}</h2>
-    <img class="pic-to-click" src="${image}"/>
-    <div>${result.content.rendered} </div>
+        
+        titleContainer.innerHTML = `<h2>${title}</h2>`;
+        imageContainer.innerHTML = `<img class="pic-to-click" src="${image}"/>`;
+        textContainer.innerHTML = `<div>${result.content.rendered} </div>`;
+        // detailContainer.innerHTML = `<div> <img class="big-pic" src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="we"/> </div>`;
+
+    // detailContainer.innerHTML = 
+    // `<div class="detail-item">
+    // <h2>${title}</h2>
+    // <img class="pic-to-click" src="${image}"/>
+    // <div>${result.content.rendered} </div>
     
-    </div>
-    <div> <img class="big-pic" src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="we"/> </div>
-    `;
+    // </div>
+    // <div> <img class="big-pic" src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="we"/> </div>
+    // `;
 };
 getDetailPost(url);
 //<div> <img src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="we"/> </div>
-const picToClick = document.querySelector(".pic-to-click");
-console.log(picToClick);
-picToClick.onclick = function (){
+// const picToClick = document.querySelector(".pic-to-click");
+// console.log(picToClick);
+imageContainer.onclick = function (){
     console.log("clicked")
 // bigPic.style.display = "block";
 }
