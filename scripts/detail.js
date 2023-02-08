@@ -18,7 +18,7 @@ async function getDetailPost() {
         const title = result.title.rendered;
         // const previousText = result.excerpt.rendered;
         //const image = result._embedded["wp:featuredmedia"][0].source_url;
-        const image = result._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
+        const image = result._embedded["wp:featuredmedia"][0].source_url;
 
     detailContainer.innerHTML = 
     `<div class="detail-item">

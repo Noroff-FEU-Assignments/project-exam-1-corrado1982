@@ -16,20 +16,22 @@ h2 {
 
 .wp-block-image {
     display: none;
-    margin: auto;
+    /* margin: auto;
     height: max(200px);
-    width: max(400px);
+    width: max(400px); */
 }
-.pick-to-click {
-    height: max(200px);
-    width: max(400px);
+.pic-to-click {
+    /* width: 200px; */
+    height: max(350px);
+    width: max(700px);
     object-fit: cover;
 }
-/* .wp-block-image img {
-    height: max(200px);
+.wp-block-image img {
+    display: none;
+    /* height: max(200px);
     width: max(400px);
-    object-fit: cover;
-} */
+    object-fit: cover; */
+}
 p {
     max-width: 700px;
     margin: 40px;
