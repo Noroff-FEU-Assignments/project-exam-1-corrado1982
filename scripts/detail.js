@@ -18,13 +18,13 @@ async function getDetailPost() {
         const title = result.title.rendered;
         // const previousText = result.excerpt.rendered;
         //const image = result._embedded["wp:featuredmedia"][0].source_url;
-
+        const image = result._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
 
     detailContainer.innerHTML = 
     `<div class="detail-item">
     <h2>${title}</h2>
-    
-    <div class="pic-to-click">${result.content.rendered} </div>
+    <img class="pic-to-click" src="${image}"/>
+    <div>${result.content.rendered} </div>
     
     </div>
     <div> <img class="big-pic" src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="we"/> </div>

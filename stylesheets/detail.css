@@ -15,15 +15,21 @@ h2 {
 }
 
 .wp-block-image {
+    display: none;
     margin: auto;
     height: max(200px);
     width: max(400px);
 }
-.wp-block-image img {
+.pick-to-click {
     height: max(200px);
     width: max(400px);
     object-fit: cover;
 }
+/* .wp-block-image img {
+    height: max(200px);
+    width: max(400px);
+    object-fit: cover;
+} */
 p {
     max-width: 700px;
     margin: 40px;
