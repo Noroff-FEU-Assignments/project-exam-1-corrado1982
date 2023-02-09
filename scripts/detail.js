@@ -1,4 +1,5 @@
 const detailContainer = document.querySelector(".detail-container");
+const titlePage = document.querySelector("title");
 const detailItem = document.querySelector(".detail-item");
 const titleContainer = document.querySelector(".title");
 const imageContainer = document.querySelector(".image-preview");
@@ -23,7 +24,7 @@ async function getDetailPost() {
         const image = result._embedded["wp:featuredmedia"][0].source_url;
         const modalImage = result._embedded["wp:featuredmedia"][0].source_url;
         
-        titleContainer.innerHTML = `<h2>${title}</h2>`;
+        titleContainer.innerHTML = `<title>${title}</title> <h2>${title}</h2>`;
         imageContainer.innerHTML = `<img class="pic-to-click" src="${image}"/>`;
         textContainer.innerHTML = `<div>${result.content.rendered} </div>`;
 
