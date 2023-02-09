@@ -16,29 +16,20 @@ h2 {
 
 .wp-block-image {
     display: none;
-    /* margin: auto;
-    height: max(200px);
-    width: max(400px); */
 }
 .pic-to-click {
-    /* width: 200px; */
     height: max(350px);
     width: max(700px);
     object-fit: cover;
 }
 .wp-block-image img {
     display: none;
-    /* height: max(200px);
-    width: max(400px);
-    object-fit: cover; */
 }
 p {
     max-width: 700px;
     margin: 40px;
 }
-/* .big-pic {
-    display: none;
-} */
+
 .modal-container {
     display: none;
     position: fixed;
@@ -49,10 +40,7 @@ p {
     height: 100%;
     overflow: auto;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    /* display: flex;
-    justify-content: center; */
-    
+    background-color: rgba(0,0,0,0.4);  
 }
 .modal-content {
     
