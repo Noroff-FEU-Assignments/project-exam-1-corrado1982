@@ -24,7 +24,8 @@ async function getDetailPost() {
         const image = result._embedded["wp:featuredmedia"][0].source_url;
         const modalImage = result._embedded["wp:featuredmedia"][0].source_url;
         
-        titleContainer.innerHTML = `<title>${title}</title> <h2>${title}</h2>`;
+        titlePage.innerHTML = `${title}`
+        titleContainer.innerHTML = ` <h2>${title}</h2>`;
         imageContainer.innerHTML = `<img class="pic-to-click" src="${image}"/>`;
         textContainer.innerHTML = `<div>${result.content.rendered} </div>`;
 
