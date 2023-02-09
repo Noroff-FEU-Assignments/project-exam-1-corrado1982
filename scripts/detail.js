@@ -48,10 +48,14 @@ async function getDetailPost() {
         console.log("clicked")
     modalContainer.style.display = "flex";
     }
-    modalContainer.onclick = function () {
-modalContainer.style.display = "none";
-console.log("clicked body");
-    }
+//     modalContainer.onclick = function () {
+// modalContainer.style.display = "none";
+// console.log("clicked body");
+//     }
+    window.onclick = function(event) {
+        if (event.target == modalContainer) {
+          modalContainer.style.display = "none";
+        }}
 
 };
 getDetailPost(url);
