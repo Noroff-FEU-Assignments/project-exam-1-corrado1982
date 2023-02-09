@@ -1,9 +1,12 @@
 const detailContainer = document.querySelector(".detail-container");
+const detailItem = document.querySelector(".detail-item");
 const titleContainer = document.querySelector(".title");
 const imageContainer = document.querySelector(".image-preview");
 const textContainer = document.querySelector(".text-container");
 const modalContainer = document.querySelector(".modal-container");
+const modalContent = document.querySelector(".modal-content");
 const bigPic = document.querySelector(".big-pic");
+const body = document.querySelector("#body-page");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -40,10 +43,16 @@ async function getDetailPost() {
     // <div> <img class="big-pic" src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="we"/> </div>
     // `;
     imageContainer.onclick = function (){
+        // detailItem.innerHTML = "";
         modalContainer.innerHTML = `<img class="modal-content" src="${result._embedded["wp:featuredmedia"][0].source_url}"/>`;
         console.log("clicked")
-    // bigPic.style.display = "block";
+    modalContainer.style.display = "flex";
     }
+//     window.onclick = function () {
+// modalContent.style.display = "none";
+// console.log("clicked body");
+//     }
+
 };
 getDetailPost(url);
 //<div> <img src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="we"/> </div>
