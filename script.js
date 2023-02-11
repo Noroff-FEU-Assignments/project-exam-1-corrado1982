@@ -52,3 +52,35 @@ getPosts(pageUrl);
 //     postContainer.innerHTML = "";
 //     getPosts(newUrl);
 // }
+
+
+// PRESO DA W3
+
+// <script>
+// let slideIndex = 1;
+// showSlides(slideIndex);
+
+// function plusSlides(r) {
+//   showSlides(slideIndex += r);
+// }
+
+
+// function showSlides(r) {
+//   //let i;
+//   let slides = document.getElementsByClassName("mySlides");
+
+  
+//   if (r > slides.length) 
+//   		{slideIndex = 1} 
+        
+//   if (r < 1)
+//   		{slideIndex = slides.length}
+  
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";  
+//   }
+  
+//   slides[slideIndex-1].style.display = "block";  
+ 
+// }
+// </script>
