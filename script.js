@@ -33,7 +33,7 @@ async function getPosts(url) {
         `<div class="card-row">
         <a href="detail.html?id=${id}">
         <h2>${title}</h2>
-        <img src="${image}" alt="image of something" />
+        <img src="${image}" alt="image of ${title}" />
         <p class="paragraf">${previousText}</p>
         </a>
         </div>`;

@@ -26,11 +26,13 @@ async function getDetailPost() {
         
         titlePage.innerHTML = `${title}`
         titleContainer.innerHTML = ` <h2>${title}</h2>`;
-        imageContainer.innerHTML = `<img class="pic-to-click" src="${image}"/>`;
+        imageContainer.innerHTML = `<img class="pic-to-click" src="${image}" alt="image of ${title}"/>`;
         textContainer.innerHTML = `<div>${result.content.rendered} </div>`;
 
     imageContainer.onclick = function (){
-        modalContainer.innerHTML = `<img class="modal-content" src="${result._embedded["wp:featuredmedia"][0].source_url}"/>`;
+        modalContainer.innerHTML = "";
+
+        modalContainer.innerHTML = `<img class="modal-content" src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="image of ${title}"/>`;
         console.log("clicked")
     modalContainer.style.display = "flex";
     }
