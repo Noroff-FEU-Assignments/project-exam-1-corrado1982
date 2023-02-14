@@ -19,7 +19,7 @@ async function getPosts(url) {
     
     const slideOne = "";
 
-    for (i = 0 ; i < 4; i++) {
+    for (let i = 0 ; i < 4; i++) {
       
         // const id = result[i].id;
         // const image = result[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
@@ -39,7 +39,7 @@ async function getPosts(url) {
         
     };
 
-    for (i = 4 ; i < 8; i++) {
+    for (let i = 4 ; i < 8; i++) {
       
         postContainer.innerHTML += 
         `<div class="card-row">
@@ -51,7 +51,7 @@ async function getPosts(url) {
         </div>`;
         
     };
-    for (i = 8 ; i < 12; i++) {
+    for (let i = 8 ; i < 12; i++) {
       
         postContainer.innerHTML += 
         `<div class="card-row">
@@ -71,7 +71,7 @@ async function getPosts(url) {
           showSlides(slideIndex += n);
         }
            function showSlides(n) {
-            let slides = document.getElementsByClassName(".card-row");
+            let slides = document.getElementsByClassName("card-row");
             // console.log(slides);
             if (n > slides.length) {slideIndex = 1};
             if (n < 1) {slideIndex = slides.length};
