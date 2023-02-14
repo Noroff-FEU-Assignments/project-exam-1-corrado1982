@@ -19,52 +19,77 @@ async function getPosts(url) {
     
     const slideOne = "";
 
-    for (i = 0 ; i < result.length; i++) {
-        // if(i === 0 && i < 4) {
-        // return slideOne;
-        // };
-        const id = result[i].id;
-        const image = result[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
-        const title = result[i].title.rendered;
-        const previousText = result[i].excerpt.rendered;
+    for (i = 0 ; i < 4; i++) {
+      
+        // const id = result[i].id;
+        // const image = result[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+        // const title = result[i].title.rendered;
+        // const previousText = result[i].excerpt.rendered;
+
         // let slides = document.getElementsByClassName(".card-row");
 
         postContainer.innerHTML += 
         `<div class="card-row">
-        <a href="detail.html?id=${id}">
-        <h2>${title}</h2>
-        <img src="${image}" alt="image of ${title}" />
-        <p class="paragraf">${previousText}</p>
+        <a href="detail.html?id=${result[i].id}">
+        <h2>${result[i].title.rendered}</h2>
+        <img src="${result[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt="image of ${result[i].title.rendered}" />
+        <p class="paragraf">${result[i].excerpt.rendered}</p>
         </a>
         </div>`;
         
-        
-        // let slideIndex = 1 ;
-        // showSlides(slideIndex);
-        
-        // function plusSlides(n) {
-        //   showSlides(slideIndex += n);
-        // }
-        //    function showSlides(n) {
-        //     let slides = document.getElementsByClassName("card-row");
-        //     // console.log(slides);
-        //     if (n > slides.length) {slideIndex = 1};
-        //     if (n < 1) {slideIndex = slides.length};
-        //     for (i = 0; i < slides.length; i++) {
-        //         slides[i].style.display = "none";  
-        //       }
-        //       slides[slideIndex-1].style.display = "block";
-        //     //   slides[slideIndex-1].style.display += "block";
-        //     //   slides[slideIndex].style.display = "block";
-              
-        //     }
-        //     preArrow.onclick = function(){
-        //         plusSlides(-1);
-        //     };
-        //     newArrow.onclick = function(){
-        //         plusSlides(1);
-        //         };
     };
+
+    for (i = 4 ; i < 8; i++) {
+      
+        postContainer.innerHTML += 
+        `<div class="card-row">
+        <a href="detail.html?id=${result[i].id}">
+        <h2>${result[i].title.rendered}</h2>
+        <img src="${result[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt="image of ${result[i].title.rendered}" />
+        <p class="paragraf">${result[i].excerpt.rendered}</p>
+        </a>
+        </div>`;
+        
+    };
+    for (i = 8 ; i < 12; i++) {
+      
+        postContainer.innerHTML += 
+        `<div class="card-row">
+        <a href="detail.html?id=${result[i].id}">
+        <h2>${result[i].title.rendered}</h2>
+        <img src="${result[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt="image of ${result[i].title.rendered}" />
+        <p class="paragraf">${result[i].excerpt.rendered}</p>
+        </a>
+        </div>`;
+        
+    };
+        // let slides = document.getElementsByClassName(".card-row");
+        let slideIndex = 1 ;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+           function showSlides(n) {
+            let slides = document.getElementsByClassName(".card-row");
+            // console.log(slides);
+            if (n > slides.length) {slideIndex = 1};
+            if (n < 1) {slideIndex = slides.length};
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slides[slideIndex-1].style.display = "block";
+            //   slides[slideIndex-1].style.display += "block";
+            //   slides[slideIndex].style.display = "block";
+              
+            }
+            preArrow.onclick = function(){
+                plusSlides(-1);
+            };
+            newArrow.onclick = function(){
+                plusSlides(1);
+                };
+    
 
 
 };
