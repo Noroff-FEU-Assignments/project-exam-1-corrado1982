@@ -27,7 +27,7 @@ async function getPosts(url) {
         const image = result[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
         const title = result[i].title.rendered;
         const previousText = result[i].excerpt.rendered;
-        
+        let slides = document.getElementsByClassName(".card-row");
 
         postContainer.innerHTML += 
         `<div class="card-row">
@@ -38,7 +38,35 @@ async function getPosts(url) {
         </a>
         </div>`;
         
+        
+        let slideIndex = 1 ;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+           function showSlides(n) {
+            let slides = document.getElementsByClassName("card-row");
+            // console.log(slides);
+            if (n > slides.length) {slideIndex = 1};
+            if (n < 1) {slideIndex = slides.length};
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slides[slideIndex-1].style.display = "block";
+            //   slides[slideIndex-1].style.display += "block";
+            //   slides[slideIndex].style.display = "block";
+              
+            }
+            preArrow.onclick = function(){
+            plusSlides(-1);
+            };
+            newArrow.onclick = function(){
+                plusSlides(1);
+                };
     };
+
+
 };
 getPosts(pageUrl);
 
