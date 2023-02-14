@@ -27,7 +27,7 @@ async function getPosts(url) {
         const image = result[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
         const title = result[i].title.rendered;
         const previousText = result[i].excerpt.rendered;
-        let slides = document.getElementsByClassName(".card-row");
+        // let slides = document.getElementsByClassName(".card-row");
 
         postContainer.innerHTML += 
         `<div class="card-row">
@@ -59,7 +59,7 @@ async function getPosts(url) {
               
             }
             preArrow.onclick = function(){
-            plusSlides(-1);
+                plusSlides(-1);
             };
             newArrow.onclick = function(){
                 plusSlides(1);
