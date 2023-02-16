@@ -1,6 +1,10 @@
 const postContainer = document.querySelector(".post-row-container");
 const preArrow = document.querySelector("#slide-arrow-prev");
 const newArrow = document.querySelector("#slide-arrow-next");
+const slide1 = document.querySelector(".slide-1");
+const slide2 = document.querySelector(".slide-2");
+const slide3 = document.querySelector(".slide-3");
+// const slides = document.querySelector(".slide");
 // let page = 2;
 
 
@@ -28,7 +32,7 @@ async function getPosts(url) {
 
         // let slides = document.getElementsByClassName(".card-row");
 
-        postContainer.innerHTML += 
+        slide1.innerHTML += 
         `<div class="card-row">
         <a href="detail.html?id=${result[i].id}">
         <h2>${result[i].title.rendered}</h2>
@@ -41,7 +45,7 @@ async function getPosts(url) {
 
     for (let i = 4 ; i < 8; i++) {
       
-        postContainer.innerHTML += 
+        slide2.innerHTML += 
         `<div class="card-row">
         <a href="detail.html?id=${result[i].id}">
         <h2>${result[i].title.rendered}</h2>
@@ -53,7 +57,7 @@ async function getPosts(url) {
     };
     for (let i = 8 ; i < 12; i++) {
       
-        postContainer.innerHTML += 
+        slide3.innerHTML += 
         `<div class="card-row">
         <a href="detail.html?id=${result[i].id}">
         <h2>${result[i].title.rendered}</h2>
@@ -63,7 +67,7 @@ async function getPosts(url) {
         </div>`;
         
     };
-        // let slides = document.getElementsByClassName(".card-row");
+        let slides = document.getElementsByClassName(".card-row");
         let slideIndex = 1 ;
         showSlides(slideIndex);
         
@@ -71,16 +75,15 @@ async function getPosts(url) {
           showSlides(slideIndex += n);
         }
            function showSlides(n) {
-            let slides = document.getElementsByClassName("card-row");
-            // console.log(slides);
+            let slides = document.getElementsByClassName("slide");
+            console.log(slides);
             if (n > slides.length) {slideIndex = 1};
             if (n < 1) {slideIndex = slides.length};
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";  
               }
               slides[slideIndex-1].style.display = "block";
-            //   slides[slideIndex-1].style.display += "block";
-            //   slides[slideIndex].style.display = "block";
+          
               
             }
             preArrow.onclick = function(){
