@@ -5,11 +5,12 @@
 #full-name,
 #e-mail,
 #subject {
-    width: 234px;
+    width: 100%;
     height: 35px;
     font-size: 1em;
 }
 #message {
+    width: 100%;
     font-size: 1.5em;
 }
 
@@ -19,12 +20,12 @@ label {
 }
 form {
     /* height: 360px; */
-    background-color: aquamarine;
-    width: 327px;
+    /* background-color: aquamarine; */
+    width: 600px;
     margin: 100px auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 }
 .submit {

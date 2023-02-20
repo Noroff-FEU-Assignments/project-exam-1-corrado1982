@@ -1,4 +1,5 @@
 body {
+    background-color: #fdffcd;
     margin: 0;
 }
 .current {
@@ -28,6 +29,7 @@ a {
     color: black;
 }
 nav {
+    box-shadow: 5px 5px 13px 7px #8080804f;
     margin: 0 100px;
     background-color: #FFFF9B;
 }
@@ -39,6 +41,7 @@ nav {
 }
 
 footer {
+    box-shadow: 5px 5px 13px 7px #8080804f;
     margin: 0 100px;
     display: flex;
     background-color: #FFFF9B;
@@ -73,7 +76,7 @@ footer a {
     display: flex;
     margin: auto;
     height: 5rem;
-    background-color: white;
+    background-color: #aeaeae;
     border: none;
     font-size: 4rem;
     cursor: pointer;
