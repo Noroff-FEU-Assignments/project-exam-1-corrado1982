@@ -28,7 +28,8 @@ a {
     color: black;
 }
 nav {
-    background-color: rgb(207, 207, 139);
+    margin: 0 100px;
+    background-color: #FFFF9B;
 }
 .title-index {
     margin-top: 30px;
@@ -38,8 +39,9 @@ nav {
 }
 
 footer {
+    margin: 0 100px;
     display: flex;
-    background-color: rgb(207, 207, 139);
+    background-color: #FFFF9B;
     justify-content: space-evenly;
     height: 150px;
     margin-top: 50px;
@@ -51,6 +53,7 @@ footer a {
 }
 .slide {
     display: flex;
+    flex-wrap: wrap;
 }
 .slide-section {
     display: flex;
