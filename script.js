@@ -70,7 +70,7 @@ async function getPosts(url) {
     };
 
     // ESPERIMENT
-    for (let i = 0 ; i < 12; i++) {
+    for (let i = 0 ; i < 1; i++) {
       
         slideSingle.innerHTML += 
         `<div class="card-row">
@@ -92,6 +92,7 @@ async function getPosts(url) {
           showSlides(slideIndex += n);
         }
            function showSlides(n) {
+            // let slides = document.querySelector(".slide-single");
             let slides = document.getElementsByClassName("slide");
             console.log(slides);
             if (n > slides.length) {slideIndex = 1};
