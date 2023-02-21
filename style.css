@@ -175,7 +175,10 @@ border-radius: 3px;
     display: none;
 } */
 .about-container {
+    padding: 20px;
+    box-shadow: 5px 5px 13px 7px #8080804f;
     margin: 100px;
+    background-color: #FFFF9B;
 }
 
 @media (max-width: 800px) {
