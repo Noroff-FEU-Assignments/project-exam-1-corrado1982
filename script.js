@@ -4,6 +4,7 @@ const newArrow = document.querySelector("#slide-arrow-next");
 const slide1 = document.querySelector(".slide-1");
 const slide2 = document.querySelector(".slide-2");
 const slide3 = document.querySelector(".slide-3");
+const slideSingle = document.querySelector(".slide-single");
 // const slides = document.querySelector(".slide");
 // let page = 2;
 
@@ -67,6 +68,22 @@ async function getPosts(url) {
         </div>`;
         
     };
+
+    // ESPERIMENT
+    for (let i = 0 ; i < 12; i++) {
+      
+        slideSingle.innerHTML += 
+        `<div class="card-row">
+        <a href="detail.html?id=${result[i].id}">
+        <h2>${result[i].title.rendered}</h2>
+        <img src="${result[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt="image of ${result[i].title.rendered}" />
+        <p class="paragraf">${result[i].excerpt.rendered}</p>
+        </a>
+        </div>`;
+        
+    };
+
+    // END
         let slides = document.getElementsByClassName(".card-row");
         let slideIndex = 1 ;
         showSlides(slideIndex);
