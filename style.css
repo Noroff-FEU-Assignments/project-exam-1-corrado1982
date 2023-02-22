@@ -126,8 +126,16 @@ footer a {
     width: 300px;
 }
 .next-posts {
+    padding: 5px 15px;
+    border: 2px;
+    border-radius: 7px;
+    background-color: #FFFF9B;
+    box-shadow: 5px 5px 13px 7px #8080804f;
     margin: auto;
     display: block;
+}
+.next-posts:hover {
+    cursor: pointer;
 }
 .about-container {
     padding: 20px;
