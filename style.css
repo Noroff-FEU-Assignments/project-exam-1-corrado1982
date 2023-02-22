@@ -143,7 +143,13 @@ footer a {
     margin: 100px;
     background-color: #FFFF9B;
 }
-
+@media (min-width: 801px){
+#hamburger-menu,
+  .fa-solid,
+  .fa-bars:before {
+    display: none;
+  }
+}
 @media (max-width: 800px) {
     .post-row-container {
         display: none;
@@ -158,4 +164,39 @@ footer a {
         display: flex;
     justify-content: center;
     }
+    footer,
+    header {
+        
+        margin: 0 50px;
+    }
+    nav {
+        position: fixed;
+        top: 155px;
+        left: 0px;
+        display: none;
+        text-align: center;
+      }
+    .list-hamburger {
+        margin-top: 0px;
+        height: 230px;
+        width: 204px;
+        display: block;
+        background-color: white;
+        padding-left: 0px;
+        min-width: 204px;
+      }
+      .label-h-m {
+        margin-block: auto;
+      }
+      #hamburger-menu {
+        display: none;
+      }
+    
+      #hamburger-menu:checked ~ nav {
+        display: block;
+      }
+    
+      .fa-solid {
+        font-size: 80px;
+      }
 }
