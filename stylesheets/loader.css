@@ -1,0 +1,24 @@
+.loader {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+  }
+  .loader:after {
+    content: " ";
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 15px solid rgb(0, 0, 255);
+    border-color: aquamarine transparent aquamarine transparent;
+    animation: loader 1.5s linear infinite;
+  }
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

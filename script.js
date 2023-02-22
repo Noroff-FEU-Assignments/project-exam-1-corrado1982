@@ -21,7 +21,7 @@ async function getPosts(url) {
     const result = await data.json();
     console.log(result);
     // console.log(result[0]._embedded.wpfeaturedmedia);
-    
+    slide1.innerHTML = "";
     const slideOne = "";
 
     for (let i = 0 ; i < 4; i++) {
@@ -32,7 +32,7 @@ async function getPosts(url) {
         // const previousText = result[i].excerpt.rendered;
 
         // let slides = document.getElementsByClassName(".card-row");
-
+        
         slide1.innerHTML += 
         `<div class="card-row">
         <a href="detail.html?id=${result[i].id}">
