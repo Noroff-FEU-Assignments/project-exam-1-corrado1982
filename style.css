@@ -170,20 +170,20 @@ footer a {
         margin: 0 50px;
     }
     nav {
-        position: fixed;
+        /* position: fixed;
         top: 155px;
         left: 0px;
+        text-align: center; */
         display: none;
-        text-align: center;
       }
     .list-hamburger {
-        margin-top: 0px;
+        /* margin-top: 0px;
         height: 230px;
-        width: 204px;
+        width: 204px; */
         display: block;
         background-color: white;
-        padding-left: 0px;
-        min-width: 204px;
+        /* padding-left: 0px;
+        min-width: 204px; */
       }
       .label-h-m {
         margin-block: auto;
@@ -198,5 +198,7 @@ footer a {
     
       .fa-solid {
         font-size: 80px;
+        margin-left: 30px;
+        margin-bottom: 10px;
       }
 }
