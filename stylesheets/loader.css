@@ -10,7 +10,7 @@
     height: 200px;
     margin: 10px;
     border-radius: 50%;
-    border: 15px solid rgb(0, 0, 255);
+    border: 15px solid rgb(0, 0, 0);
     border-color: rgba(241, 194, 146, 0.785) transparent rgba(241, 194, 146, 0.785) transparent;
     animation: loader 1.5s linear infinite;
   }
