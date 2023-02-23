@@ -21,12 +21,16 @@ label {
 form {
     /* height: 360px; */
     /* background-color: aquamarine; */
-    width: 600px;
+    /* width: 600px;
     margin: 100px auto;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    justify-content: center;
+    justify-content: center; */
+
+    margin: 100px 500px;
+    display: flex;
+    flex-direction: column;
 }
 .submit {
     margin: 15px auto;
@@ -38,4 +42,20 @@ form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+@media (max-width: 1300px) {
+form{
+    margin: 100px 400px;
+}
+}
+@media (max-width: 1300px) {
+    form{
+        margin: 100px 100px;
+    }
+}
+@media (max-width: 500px) {
+    form{
+        margin: 100px 50px;
+    }
 }
