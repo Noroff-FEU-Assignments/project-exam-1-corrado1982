@@ -3,7 +3,7 @@ const titlePage = document.querySelector("title");
 const detailItem = document.querySelector(".detail-item");
 const titleContainer = document.querySelector(".title");
 const imageContainer = document.querySelector(".image-preview");
-const imageContainerSmall = document.querySelector(".image-preview-small");
+// const imageContainerSmall = document.querySelector(".image-preview-small");
 const textContainer = document.querySelector(".text-container");
 const modalContainer = document.querySelector(".modal-container");
 const modalContent = document.querySelector(".modal-content");
@@ -30,7 +30,7 @@ async function getDetailPost() {
         titlePage.innerHTML = `Ancient Civilizations | ${title}`
         titleContainer.innerHTML = ` <h2>${title}</h2>`;
         imageContainer.innerHTML = `<img class="pic-to-click" src="${image}" alt="image of ${title}"/>`;
-        imageContainerSmall.innerHTML = `<img class="pic-to-click-small" src="${modalImageSmaller}" alt="image of ${title}"/>`;
+        // imageContainerSmall.innerHTML = `<img class="pic-to-click-small" src="${modalImageSmaller}" alt="image of ${title}"/>`;
         textContainer.innerHTML = `<div>${result.content.rendered} </div>`;
 
     imageContainer.onclick = function (){
