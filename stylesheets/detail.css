@@ -69,11 +69,15 @@ p {
     }
 }
 @media (max-width: 500px) {
- .pic-to-click{
+ /* .pic-to-click{
         display:none;
     }
     .pic-to-click-small {
         display: block;
+    } */
+    .pic-to-click{
+    height: max(150px);
+    width: max(300px);
+    object-fit: cover;
     }
-
 }
