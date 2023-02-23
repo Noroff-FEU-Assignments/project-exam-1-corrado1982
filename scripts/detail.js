@@ -9,6 +9,8 @@ const modalContainer = document.querySelector(".modal-container");
 const modalContent = document.querySelector(".modal-content");
 const bigPic = document.querySelector(".big-pic");
 const body = document.querySelector("#body-page");
+// var span = document.querySelector(".close");
+
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -32,17 +34,16 @@ async function getDetailPost() {
         textContainer.innerHTML = `<div>${result.content.rendered} </div>`;
 
     imageContainer.onclick = function (){
-        modalContainer.innerHTML = "";
+        // modalContainer.innerHTML = "";
 
-        modalContainer.innerHTML = `<img class="modal-content" src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="image of ${title}"/>`;
+        modalContainer.innerHTML = `<div class="modal-div"><img class="modal-content" src="${result._embedded["wp:featuredmedia"][0].source_url}" alt="image of ${title}"/></div>`;
         console.log("clicked")
     modalContainer.style.display = "flex";
     }
-
+    
     window.onclick = function(event) {
         if (event.target == modalContainer) {
           modalContainer.style.display = "none";
         }}
-
 };
 getDetailPost(url);

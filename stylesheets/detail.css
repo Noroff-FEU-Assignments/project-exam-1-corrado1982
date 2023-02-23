@@ -44,10 +44,17 @@ p {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);  
 }
+.modal-div,
 .modal-content {
     
     margin: auto;
 }
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
 @media (max-width: 800px) {
     /* .pic-to-click{
         display:none;
