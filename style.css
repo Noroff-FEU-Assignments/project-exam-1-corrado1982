@@ -170,6 +170,9 @@ footer a {
         
         margin: 0 50px;
     }
+    .about-container {
+        margin: 100px 50px;
+    }
     nav {
         /* position: fixed;
         top: 155px;
