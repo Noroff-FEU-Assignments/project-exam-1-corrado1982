@@ -29,7 +29,9 @@ p {
     max-width: 700px;
     margin: 40px;
 }
-
+.pic-to-click-small {
+    display:none;
+}
 .modal-container {
     display: none;
     position: fixed;

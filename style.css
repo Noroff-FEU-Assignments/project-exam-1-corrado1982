@@ -132,6 +132,7 @@ footer a {
     background-color: #FFFF9B;
     box-shadow: 5px 5px 13px 7px #8080804f;
     margin: auto;
+    margin-bottom: 20px;
     display: block;
 }
 .next-posts:hover {

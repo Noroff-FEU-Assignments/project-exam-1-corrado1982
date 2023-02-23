@@ -70,7 +70,7 @@ async function getPosts(url) {
     };
 
     // ESPERIMENT
-    for (let i = 0 ; i < 1; i++) {
+    for (let i = 0 ; i < 4; i++) {
       
         slideSingle.innerHTML += 
         `<div class="card-row">
