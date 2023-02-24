@@ -193,6 +193,7 @@ footer a {
     #logo {
         display: block;
         width: 200px;
+        margin:auto;
     }
     h1 {
         display: none;
