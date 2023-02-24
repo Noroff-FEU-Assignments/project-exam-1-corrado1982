@@ -45,6 +45,9 @@ a {
     text-decoration: none;
     color: black;
 }
+#logo {
+    display: none;
+}
 header {
     box-shadow: 5px 5px 13px 7px #8080804f;
     margin: 0 100px;
@@ -186,6 +189,13 @@ footer a {
     footer,
     header {
         margin: 0 50px;
+    }
+    #logo {
+        display: block;
+        width: 200px;
+    }
+    h1 {
+        display: none;
     }
     header {
         /* display: flex;
