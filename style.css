@@ -193,7 +193,7 @@ footer a {
     header {
         display: flex;
         flex-direction: row-reverse;
-        
+
         justify-content: space-between;
     }
     .about-container {
@@ -235,7 +235,7 @@ footer a {
 @media (max-width: 660px) {
     #logo {
         display: block;
-        width: 200px;
+        width: 150px;
     }
     h1 {
         display: none;
