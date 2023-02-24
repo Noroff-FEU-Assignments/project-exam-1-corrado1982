@@ -188,7 +188,10 @@ footer a {
     }
     footer,
     header {
-        margin: 0 50px;
+        margin: 0 10px;
+    }
+    footer a {
+        font-size: 1.5em;
     }
     #logo {
         display: block;
@@ -198,11 +201,7 @@ footer a {
     h1 {
         display: none;
     }
-    header {
-        /* display: flex;
-        flex-direction: row-reverse; */
-        margin: 0 10px;
-    }
+   
     .about-container {
         margin: 100px 50px;
     }
