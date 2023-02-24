@@ -1,5 +1,5 @@
 // console.log("wei ciao")
-
+const formTop = document.querySelector("#contact-form");
 const form = document.querySelector("#form-block");
 const nameField = document.querySelector("#full-name");
 const nameError = document.querySelector("#name-error");
@@ -9,6 +9,7 @@ const subjectField = document.querySelector("#subject");
 const subjectError = document.querySelector("#subject-error");
 const messageField = document.querySelector("#message");
 const messageError = document.querySelector("#message-error");
+const submitButton = document.querySelector(".submit");
 
 // nameField.addEventListener {
 
@@ -49,6 +50,8 @@ form.onsubmit = function () {
         validateInput(messageField.value, 25) &&
         validateEmail(emailField.value)
       ) {
+        formTop.innerHTML = "";
+        formTop.innerHTML = `<div id="message-sent"><p>Your Message Was Sent</p></div>`
         console.log("allright!!!");
       } 
 };
