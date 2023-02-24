@@ -84,7 +84,7 @@ async function getPosts(url) {
     };
 
     // END
-        let slides = document.getElementsByClassName(".card-row");
+        // let slides = document.getElementsByClassName(".card-row");
         let slideIndex = 1 ;
         showSlides(slideIndex);
         
