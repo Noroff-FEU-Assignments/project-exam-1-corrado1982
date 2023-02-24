@@ -190,6 +190,7 @@ footer a {
     header {
         /* display: flex;
         flex-direction: row-reverse; */
+        margin: 0 10px;
     }
     .about-container {
         margin: 100px 50px;
