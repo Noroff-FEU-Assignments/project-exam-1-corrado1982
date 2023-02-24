@@ -2,12 +2,19 @@
     font-family: "Rubik Distressed";
     src: url(font/RubikDistressed-Regular.ttf) format("truetype");
   }
-  @font-face {
+@font-face {
     font-family: "Caesar Dressing";
     src: url(font/CaesarDressing-Regular.ttf) format("truetype");
   }
+@font-face {
+    font-family: "Hind Regular";
+    src: url(font/Hind-Regular.ttf) format("truetype");
+  }
 h1, h2 {
     font-family: "Caesar Dressing";
+}
+a, p {
+    font-family: "Hind Regular";
 }
 body {
     background-color: #fdffcd;
