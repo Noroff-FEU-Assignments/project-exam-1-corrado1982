@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "Rubik Distressed";
+    src: url(font/RubikDistressed-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Caesar Dressing";
+    src: url(font/CaesarDressing-Regular.ttf) format("truetype");
+  }
+h1, h2 {
+    font-family: "Caesar Dressing";
+}
 body {
     background-color: #fdffcd;
     margin: 0;
@@ -35,7 +46,7 @@ header {
 .title-index {
     margin: 30px;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 footer {
