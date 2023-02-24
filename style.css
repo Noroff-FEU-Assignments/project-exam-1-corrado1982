@@ -23,9 +23,6 @@ body {
 .current {
     text-decoration: underline;
 }
-#logo {
-    display:none;
-}
 h1 {
     font-size: 3em;
     margin: 0;
@@ -188,13 +185,11 @@ footer a {
     }
     footer,
     header {
-        margin: 0 10px;
+        margin: 0 50px;
     }
     header {
         display: flex;
         flex-direction: row-reverse;
-
-        justify-content: space-between;
     }
     .about-container {
         margin: 100px 50px;
@@ -231,14 +226,4 @@ footer a {
         margin-left: 30px;
         margin-bottom: 10px;
       }
-}
-@media (max-width: 660px) {
-    #logo {
-        display: block;
-        width: 150px;
-    }
-    h1 {
-        display: none;
-       
-    }
 }
