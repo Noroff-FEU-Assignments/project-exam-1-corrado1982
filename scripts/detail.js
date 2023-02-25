@@ -17,8 +17,10 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const emb = "?_embed&"
 const url = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/"  + id + emb ;
-console.log(id)
-console.log(url)
+// console.log(id)
+// console.log(url)
+
+
 async function getDetailPost() {
     const data = await fetch(url);
     const result = await data.json();
