@@ -1,5 +1,6 @@
 const postsContainer = document.querySelector(".posts-container");
 const nextPosts = document.querySelector(".next-posts");
+const search = document.querySelector("#search");
 var page = 2;
 // var page = 1;
 // const pageUrl = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?per_page=10&_embed&page" + page;
@@ -8,6 +9,9 @@ const pageUrl = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?p
 const baseUrl = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?per_page=10&_embed&page=";
 
 
+// search.onkeyup = function() {
+//     console.log(event.target.value);
+// }
 
 async function getCards (url) {
     const data = await fetch(url);
@@ -19,6 +23,20 @@ async function getCards (url) {
         const image = result[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
         const title = result[i].title.rendered;
         const previousText = result[i].excerpt.rendered;
+
+        console.log(result[i].title.rendered);
+
+        // search.onkeyup = function() {
+        //     console.log(event.target.value);
+            
+        // }
+        // const filteredPots = title.filter(filterPosts);
+        // function filterPosts(posts) {
+        //     if(posts.toLowerCase().startsWith(event.target.value)){
+        //         return true;
+        //     }
+        // }
+        
 
         if(result.length < 10) {
             nextPosts.style.display = "none";
@@ -62,7 +80,6 @@ async function newCards (url) {
 
         if(result.length < 10) {
             nextPosts.style.display = "none";
-            console.log("don t display it");
         }
         // detail.html?id=${id}
         
