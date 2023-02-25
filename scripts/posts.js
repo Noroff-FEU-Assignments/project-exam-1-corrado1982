@@ -9,9 +9,9 @@ const pageUrl = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?p
 const baseUrl = "https://issimo.one/ancient-civilizations/wp-json/wp/v2/posts/?per_page=10&_embed&page=";
 
 
-search.onkeyup = function() {
-    console.log(event.target.value);
-}
+// search.onkeyup = function() {
+//     console.log(event.target.value);
+// }
 
 async function getCards (url) {
     const data = await fetch(url);
@@ -28,7 +28,7 @@ async function getCards (url) {
         const previousText = result[i].excerpt.rendered;
 
         
-        console.log(result[i].title.rendered);
+        // console.log(result[i].title.rendered);
         
         // search.onkeyup = function() {
         //     console.log(event.target.value);
